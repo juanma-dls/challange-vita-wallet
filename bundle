@@ -1,0 +1,73 @@
+.F
+
+Failures:
+
+  1) Prices API /prices/btc_to_usd get Unable to fetch BTC price returns a 422 response
+     Failure/Error:
+       raise UnexpectedResponse,
+         "Expected response code '#{response.code}' to match '#{expected}'\n" \
+           "Response body: #{response.body}"
+
+     Rswag::Specs::UnexpectedResponse:
+       Expected response code '200' to match '422'
+       Response body: {"usd_code":"USD","usd_description":"United States Dollar","btc_usd":"62,930.323","time_updated":"Jun 24, 2024 03:15:01 UTC"}
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rswag-specs-2.13.0/lib/rswag/specs/response_validator.rb:28:in `validate_code!'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rswag-specs-2.13.0/lib/rswag/specs/response_validator.rb:18:in `validate!'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rswag-specs-2.13.0/lib/rswag/specs/example_helpers.rb:30:in `assert_response_matches_metadata'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rswag-specs-2.13.0/lib/rswag/specs/example_group_helpers.rb:144:in `block in run_test!'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263:in `instance_exec'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263:in `block in run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `block in run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-rails-6.1.3/lib/rspec/rails/adapters.rb:75:in `block (2 levels) in <module:MinitestLifecycleAdapter>'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457:in `instance_exec'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:390:in `execute_with'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:352:in `call'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/hooks.rb:486:in `run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:259:in `run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `map'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:642:in `run_examples'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:607:in `run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `block in run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `map'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:608:in `run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `map'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2091:in `with_suite_hooks'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:116:in `block in run_specs'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/reporter.rb:74:in `report'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:115:in `run_specs'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:89:in `run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'
+     # /home/juanma/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'
+     # /home/juanma/.rbenv/versions/3.1.6/bin/rspec:25:in `load'
+     # /home/juanma/.rbenv/versions/3.1.6/bin/rspec:25:in `<main>'
+     # 
+     #   Showing full backtrace because every line was filtered out.
+     #   See docs for RSpec::Configuration#backtrace_exclusion_patterns and
+     #   RSpec::Configuration#backtrace_inclusion_patterns for more information.
+
+Finished in 0.80913 seconds (files took 0.74781 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/requests/prices_spec.rb:14 # Prices API /prices/btc_to_usd get Unable to fetch BTC price returns a 422 response
+

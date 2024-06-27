@@ -1,0 +1,89 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/prices/btc_to_usd":
+    get:
+      summary: show price
+      tags:
+      - Get Price BTC
+      responses:
+        '200':
+          description: successful
+  "/users/{user_id}/transactions":
+    parameters:
+    - name: user_id
+      in: path
+      description: user_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: list transactions
+      tags:
+      - List transactions especific user
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create transaction
+      tags:
+      - Create transaction especific user
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '201':
+          description: successful
+        '422':
+          description: unprocessable entity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                currency_from:
+                  type: string
+                  example: USD
+                currency_to:
+                  type: string
+                  example: BTC
+                amount:
+                  type: number
+                  example: 100.0
+              required:
+              - currency_from
+              - currency_to
+              - amount
+  "/users/{user_id}/transactions/{id}":
+    parameters:
+    - name: user_id
+      in: path
+      description: user_id
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show transaction
+      tags:
+      - Show transaction
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000
