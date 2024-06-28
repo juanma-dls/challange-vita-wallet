@@ -9,7 +9,7 @@ services:
     envVars:
       - key: RAILS_ENV
         value: production
-      - key: SECRET_KEY_BASE
+      - key: this_is_my_secret_key_base_jmdls1997
         sync: false # Si ya está configurado en la interfaz de Render, evita que se sobrescriba
       - key: DATABASE_URL
         sync: false # Similarmente, evita sobrescribir si ya está configurado
