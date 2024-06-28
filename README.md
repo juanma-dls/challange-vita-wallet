@@ -26,13 +26,11 @@ bundle install
 
 ### 3. Configure Environment Variables
 
-DATABASE_HOST=localhost
-DATABASE_USER=root
-DATABASE_PASSWORD=yourpassword
+Copy environment variables from .evn.example
 
-### 4. Create Database 
+### 4. Create database, run migrations and run seeders
 
-rails db:create
+rails db:create db:migrate db:seed
 
 
 ### Run the Application
