@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: challage-vita-wallet
+    runtime: ruby
+    plan: free
+    buildCommand: bundle install
+    preDeployCommand: "bundle exec rails db:migrate && bundle exec rails db:seed"
+    startCommand: "bundle exec rails server"
+    envVars:
+      - key: RAILS_ENV
+        value: production
+      - key: SECRET_KEY_BASE
+        sync: false # Si ya está configurado en la interfaz de Render, evita que se sobrescriba
+      - key: DATABASE_URL
+        sync: false # Similarmente, evita sobrescribir si ya está configurado
